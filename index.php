@@ -55,6 +55,34 @@ $hotels = [
 
 <body>
 
+  <div class="container">
+    <h1 class="my-5">Hotel PHP</h1>
+    <table class="my-5 table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Hotel Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Parking</th>
+          <th scope="col">Rating</th>
+          <th scope="col">Distance from center</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($hotels as $hotel) : ?>
+          <tr>
+            <?php foreach ($hotel as $key => $value) : ?>
+              <td>
+                <?php echo $value ?>
+              </td>
+            <?php endforeach ?>
+          </tr>
+        <?php endforeach ?>
+      </tbody>
+    </table>
+
+  </div>
+
+
   <?php
 
   foreach ($hotels as $hotel) {
