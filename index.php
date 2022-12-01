@@ -72,7 +72,13 @@ $hotels = [
           <tr>
             <?php foreach ($hotel as $key => $value) : ?>
               <td>
-                <?php echo $value ?>
+                <?php if ($key === 'parking' && $value) : ?>
+                  <?php echo 'Yes' ?>
+                <?php elseif ($key === 'parking' && !$value) : ?>
+                  <?php echo 'No' ?>
+                <?php else : ?>
+                  <?php echo $value ?>
+                <?php endif ?>
               </td>
             <?php endforeach ?>
           </tr>
@@ -81,17 +87,6 @@ $hotels = [
     </table>
 
   </div>
-
-
-  <?php
-
-  foreach ($hotels as $hotel) {
-    foreach ($hotel as $key => $value) {
-      echo "<li>$key: $value</li>";
-    }
-  }
-
-  ?>
 
 </body>
 
