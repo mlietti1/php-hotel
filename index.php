@@ -45,7 +45,6 @@ $hotels = [
 // di default elenco da ciclare è tutto l'array
 $selected_hotels = $hotels;
 
-var_dump($_GET);
 
 // vedo se dato esiste in get parking, non isset ma !empty, perchè verifica sia se esiste sia se è vuoto
 
